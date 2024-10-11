@@ -15,7 +15,7 @@ URL = 'https://github.com/Diyarbekoralbaev/mirapi'
 EMAIL = 'diyarbekdev@gmail.com'
 AUTHOR = 'Diyarbek Oralbaev'
 REQUIRES_PYTHON = '>=3.9.0'
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 
 # Required packages
 REQUIRED = [
