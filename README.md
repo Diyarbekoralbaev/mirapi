@@ -128,27 +128,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Testing
-
-To run the tests, first install the development dependencies:
-
-```bash
-pip install mirapi[dev]
-```
-
-Then run the tests using pytest:
-
-```bash
-pytest
-```
-
-## Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for details on version history and changes.
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Diyarbekoralbaev/mirapi/LICENSE) file for details.
 
 ## Acknowledgments
 
