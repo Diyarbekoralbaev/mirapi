@@ -1,5 +1,6 @@
 from typing import List
 
+
 class RouteAlreadyExistsError(Exception):
     def __init__(self, path: str, method: List[str]):
         """
