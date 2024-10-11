@@ -2,9 +2,9 @@ from inspect import signature, getdoc
 from typing import get_type_hints, Callable, Any, Dict, List
 
 from pydantic import BaseModel
-from starlette.exceptions import HTTPException
-from starlette.requests import Request
-from starlette.responses import Response, JSONResponse, PlainTextResponse
+from mirapi.exceptions import HTTPException
+from mirapi.requests import Request
+from mirapi.responses import Response, JSONResponse, PlainTextResponse
 
 from mirapi.errors import page_not_found
 from mirapi.router import Router
