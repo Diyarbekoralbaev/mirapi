@@ -3,7 +3,11 @@
 [![PyPI version](https://badge.fury.io/py/mirapi.svg)](https://badge.fury.io/py/mirapi)
 [![Python Versions](https://img.shields.io/pypi/pyversions/mirapi.svg)](https://pypi.org/project/mirapi/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+<p align="center">
+  <a href="https://tirikchilik.uz/araltech">
+    <img src="https://camo.githubusercontent.com/ed28339e5a5786534715b1c0c885271437761fc91af84d5dc5bbc2c71e307a02/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f546972696b6368696c696b2d6666646430303f7374796c653d666f722d7468652d6261646765" alt="Donate with Tirikchilik">
+  </a>
+</p>
 MirAPI is a lightweight, fast, and easy-to-use ASGI-based Python web framework for building APIs. It's designed to be simple yet powerful, allowing developers to quickly create robust asynchronous web applications and RESTful APIs with automatic OpenAPI (Swagger) documentation.
 
 ## Features
@@ -127,6 +131,14 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+## Support
+If you like this project, please consider supporting it by making a donation:
+<p align="center">
+  <a href="https://tirikchilik.uz/araltech">
+    <img src="https://camo.githubusercontent.com/ed28339e5a5786534715b1c0c885271437761fc91af84d5dc5bbc2c71e307a02/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f546972696b6368696c696b2d6666646430303f7374796c653d666f722d7468652d6261646765" alt="Donate with Tirikchilik">
+  </a>
+</p>
 
 ## License
 
