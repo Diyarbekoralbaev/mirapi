@@ -110,10 +110,7 @@ setup(
         'Programming Language :: Python :: Implementation :: PyPy',
         'Development Status :: 3 - Alpha',
         'Operating System :: OS Independent',
-        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
-        'Topic :: Internet :: WWW/HTTP :: WSGI',
-        'Topic :: Internet :: WWW/HTTP :: ASGI',
-        'Topic :: Internet :: WWW/HTTP :: ASGI :: Application',
+        'Topic :: Internet :: WWW/HTTP',
         'Framework :: AsyncIO',
         'Intended Audience :: Developers'
     ],
