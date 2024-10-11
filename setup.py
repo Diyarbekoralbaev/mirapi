@@ -11,7 +11,7 @@ from setuptools import find_packages, setup, Command
 # Package meta-data.
 NAME = 'mirapi'
 DESCRIPTION = 'A lightweight and fast ASGI-based Python web framework for building APIs with automatic OpenAPI documentation.'
-URL = 'https://github.com/Diyaroralbaev/mirapi'
+URL = 'https://github.com/Diyarbekoralbaev/mirapi'
 EMAIL = 'diyarbekdev@gmail.com'
 AUTHOR = 'Diyarbek Oralbaev'
 REQUIRES_PYTHON = '>=3.9.0'
