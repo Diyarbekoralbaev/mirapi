@@ -1,4 +1,5 @@
-from starlette.responses import Response
+from mirapi.responses import Response
+
 
 def page_not_found() -> Response:
     """
@@ -6,6 +7,7 @@ def page_not_found() -> Response:
     :return: The 404 response.
     """
     return Response('Not Found', status_code=404)
+
 
 def method_not_allowed() -> Response:
     """

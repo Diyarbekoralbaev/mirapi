@@ -1,26 +1,28 @@
-from typing import get_type_hints, Callable, Any, Dict, List, Optional
 from inspect import signature, getdoc
+from typing import get_type_hints, Callable, Any, Dict, List
 
 from pydantic import BaseModel
-from starlette.exceptions import HTTPException
-from starlette.responses import Response, JSONResponse, PlainTextResponse
-from starlette.requests import Request
-from .errors import page_not_found
-from .router import Router
-from .types import OpenAPISpec, OpenAPIOperation, OpenAPIParameter
+from mirapi.exceptions import HTTPException
+from mirapi.requests import Request
+from mirapi.responses import Response, JSONResponse, PlainTextResponse
+
+from mirapi.errors import page_not_found
+from mirapi.router import Router
+from mirapi.types import OpenAPISpec, OpenAPIOperation, OpenAPIParameter
+
 
 class MirAPI:
     def __init__(
-        self,
-        title: str = "MirAPI",
-        version: str = "1.0.0",
-        description: str = "",
-        terms_of_service: str = "",
-        contact: Dict[str, str] = None,
-        license_info: Dict[str, str] = None,
-        docs_url: str = "/docs",
-        openapi_url: str = "/openapi.json",
-        docs_enabled: bool = True
+            self,
+            title: str = "MirAPI",
+            version: str = "1.0.0",
+            description: str = "",
+            terms_of_service: str = "",
+            contact: Dict[str, str] = None,
+            license_info: Dict[str, str] = None,
+            docs_url: str = "/docs",
+            openapi_url: str = "/openapi.json",
+            docs_enabled: bool = True
     ):
         self.router = Router()
         self.title = title
