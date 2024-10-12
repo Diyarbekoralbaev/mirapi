@@ -1,6 +1,6 @@
 # MirAPI
 
-[![PyPI version](https://badge.fury.io/py/mirapi.svg)](https://badge.fury.io/py/mirapi)
+[![PyPI version](https://img.shields.io/pypi/v/mirapi.svg)](https://pypi.org/project/mirapi/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/mirapi.svg)](https://pypi.org/project/mirapi/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![PyPI Downloads](https://img.shields.io/pypi/dm/your-package-name)
