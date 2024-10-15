@@ -1,5 +1,4 @@
 from typing import Tuple, Dict, Callable, Optional, List
-
 from parse import parse
 from starlette.routing import Route
 
@@ -15,7 +14,7 @@ class Router:
         """
         Add a new route to the router.
         :param path: The path of the route.
-        :param handler: The handler function.
+        :param handler: The handler class or function.
         :param methods: The HTTP methods.
         """
         for route in self.routes:
@@ -33,6 +32,13 @@ class Router:
         for route in self.routes:
             match = parse(route.path, request.url.path)
             if match and request.method in route.methods:
-                return route.endpoint, match.named
+                handler = route.endpoint
+                if isinstance(handler, type):
+                    handler_instance = handler()
+                    method_handler = getattr(handler_instance, request.method.lower(), None)
+                    if method_handler:
+                        return method_handler, match.named
+                else:
+                    return handler, match.named
 
         return None, {}
