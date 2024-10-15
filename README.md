@@ -21,6 +21,9 @@ MirAPI is a lightweight, fast, and easy-to-use ASGI-based Python web framework f
 - Lightweight and fast asynchronous application
 - Customizable error handling
 - Support for all standard HTTP methods
+- **New**: class-based handlers for route management
+- **New**: Added `APIRouter` for modular route management and composition.
+- **New**: Introduced `include_router` method for integrating external routers seamlessly.
 
 ## Installation
 
