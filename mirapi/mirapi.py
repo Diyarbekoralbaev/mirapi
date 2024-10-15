@@ -95,6 +95,13 @@ class MirAPI:
 
         return wrapper
 
+    def include_router(self, router: Router) -> None:
+        """
+        Include all routes from another router.
+        :param router: The router object.
+        """
+        self.router.routes.extend(router.routes)
+
     def generate_openapi_spec(self) -> OpenAPISpec:
         paths: Dict[str, Dict[str, OpenAPIOperation]] = {}
         for route in self.router.routes:
@@ -312,3 +319,60 @@ class MirAPI:
         :param path: The path of the route.
         """
         return self.route(path, ['CONNECT'])
+
+class APIRouter:
+    def __init__(self):
+        self.router = Router()  # Internal router to manage routes
+
+    def add_route(self, path: str, handler: Callable, methods: List[str]) -> None:
+        """Add a new route to the router."""
+        self.router.add_route(path, handler, methods)
+
+    def get(self, path: str) -> Callable:
+        """Decorator for adding a GET route."""
+        return self._add_method_route(path, ['GET'])
+
+    def post(self, path: str) -> Callable:
+        """Decorator for adding a POST route."""
+        return self._add_method_route(path, ['POST'])
+
+    def put(self, path: str) -> Callable:
+        """Decorator for adding a PUT route."""
+        return self._add_method_route(path, ['PUT'])
+
+    def patch(self, path: str) -> Callable:
+        """Decorator for adding a PATCH route."""
+        return self._add_method_route(path, ['PATCH'])
+
+    def delete(self, path: str) -> Callable:
+        """Decorator for adding a DELETE route."""
+        return self._add_method_route(path, ['DELETE'])
+
+    def head(self, path: str) -> Callable:
+        """Decorator for adding a HEAD route."""
+        return self._add_method_route(path, ['HEAD'])
+
+    def options(self, path: str) -> Callable:
+        """Decorator for adding an OPTIONS route."""
+        return self._add_method_route(path, ['OPTIONS'])
+
+    def trace(self, path: str) -> Callable:
+        """Decorator for adding a TRACE route."""
+        return self._add_method_route(path, ['TRACE'])
+
+    def connect(self, path: str) -> Callable:
+        """Decorator for adding a CONNECT route."""
+        return self._add_method_route(path, ['CONNECT'])
+
+    def _add_method_route(self, path: str, methods: List[str] = None) -> Callable:
+        """Helper to add routes with specified methods."""
+        def wrapper(func: Callable) -> Callable:
+            self.add_route(path, func, methods)  # Add the route
+            return func
+
+        return wrapper
+
+    @property
+    def routes(self):
+        """Expose routes for the MirAPI class."""
+        return self.router.routes
